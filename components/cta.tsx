@@ -27,7 +27,7 @@ export function CTA() {
                 asChild
                 className="bg-primary-foreground/10 border-primary-foreground/20 hover:bg-primary-foreground/20 text-primary-foreground"
               >
-                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/5561993968292" target="_blank" rel="Gabriel">
                   <MessageSquare className="mr-2" size={20} />
                   WhatsApp
                 </a>
