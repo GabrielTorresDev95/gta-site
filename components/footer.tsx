@@ -51,13 +51,7 @@ export function Footer() {
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <Mail size={16} className="mt-0.5 flex-shrink-0 text-primary" />
                 <a href="mailto:contato@gtadev.com.br" className="hover:text-primary transition-colors">
-                  contato@gtadev.com.br
-                </a>
-              </li>
-              <li className="flex items-start gap-2 text-sm text-muted-foreground">
-                <Phone size={16} className="mt-0.5 flex-shrink-0 text-primary" />
-                <a href="tel:+5511999999999" className="hover:text-primary transition-colors">
-                  (11) 99999-9999
+                  gabrielprofessor802@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
