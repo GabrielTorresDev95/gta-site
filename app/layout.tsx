@@ -30,6 +30,8 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"  // garante carregamento após renderização
         />
+
+        <meta name="google-adsense-account" content="ca-pub-9143074734471145"></meta>
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <Suspense fallback={null}>{children}</Suspense>
