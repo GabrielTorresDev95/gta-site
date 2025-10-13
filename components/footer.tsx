@@ -1,5 +1,7 @@
 import { Code2, Mail, MapPin, Phone } from "lucide-react"
 
+
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -71,4 +73,6 @@ export function Footer() {
       </div>
     </footer>
   )
+
+  
 }
