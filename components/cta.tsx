@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Mail, MessageSquare, Send } from "lucide-react"
 import AdBanner from "@/components/AdBanner"
 
+
 export function CTA() {
   return (
     <section id="contato" className="pb-20 pt-8 lg:pb-32">
@@ -56,8 +57,8 @@ export function CTA() {
             </div>
           </div>
 
-          {/* 🔥 ANÚNCIO AQUI */}
-          <AdBanner />
+    < AdBanner />
+  
 
         </div>
       </div>

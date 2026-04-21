@@ -1,37 +1,32 @@
-// components/Adbanner.tsx
-'use client';
+'use client'
 
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
-type AdbannerProps = {
-  dataAdSlot: string;
-  dataAdFormat?: string;
-  dataFullWidthResponsive?: boolean;
-};
+declare global {
+  interface Window {
+    adsbygoogle: any[]
+  }
+}
 
-export default function Adbanner({
-  dataAdSlot,
-  dataAdFormat = 'auto',
-  dataFullWidthResponsive = true,
-}: AdbannerProps) {
+export default function AdBanner() {
   useEffect(() => {
     try {
-      if (typeof window !== 'undefined') {
-        ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
-      }
-    } catch (err) {
-      console.error('AdSense error:', err);
+      (window.adsbygoogle = window.adsbygoogle || []).push({})
+    } catch (e) {
+      console.error(e)
     }
-  }, []);
+  }, [])
 
   return (
-    <ins
-      className="adsbygoogle"
-      style={{ display: 'block' }}
-      data-ad-client="ca-pub-9143074734471145"
-      data-ad-slot={dataAdSlot}
-      data-ad-format={dataAdFormat}
-      data-full-width-responsive={dataFullWidthResponsive.toString()}
-    />
-  );
+    <div className="mt-10">
+      <ins
+        className="adsbygoogle"
+        style={{ display: 'block' }}
+        data-ad-client="ca-pub-9143074734471145"
+        data-ad-slot="3478915894"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
+    </div>
+  )
 }
