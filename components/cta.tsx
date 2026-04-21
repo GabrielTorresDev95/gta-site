@@ -31,7 +31,7 @@ export function CTA() {
                   size="lg"
                   className="rounded-2xl bg-primary px-7 text-white shadow-[0_0_30px_rgba(46,123,255,0.25)] hover:-translate-y-0.5 hover:bg-primary/90"
                 >
-                  <a href="mailto:contato@gtadev.com.br">
+                  <a href="mailto:torres.almeida95@gmail.com">
                     <Mail className="mr-2" size={18} />
                     Enviar e-mail
                   </a>
