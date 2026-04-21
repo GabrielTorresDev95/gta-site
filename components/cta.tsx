@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Mail, MessageSquare, Send } from "lucide-react"
-import AdBanner from "@/components/Adbanner"
+import AdBanner from "@/components/AdBanner"
 
 export function CTA() {
   return (
