@@ -1,18 +1,16 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Cpu, Menu, Sparkles, X } from "lucide-react"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
+    const handleScroll = () => setIsScrolled(window.scrollY > 20)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -27,25 +25,32 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-transparent"
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+        isScrolled ? "pt-3" : "pt-5"
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="font-bold text-xl lg:text-2xl text-primary">
-              GTA<span className="text-foreground font-normal"> Desenvolvimento</span>
+        <div
+          className={`panel-futuristic flex items-center justify-between rounded-full px-4 py-3 transition-all duration-500 lg:px-6 ${
+            isScrolled ? "bg-background/80 shadow-[0_12px_40px_rgba(0,0,0,0.35)]" : "bg-background/45"
+          }`}
+        >
+          <Link href="/" className="flex items-center gap-3">
+            <div className="glow-ring flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-secondary text-white">
+              <Cpu size={20} />
+            </div>
+            <div>
+              <div className="text-lg font-black tracking-[0.22em] text-white uppercase">GTA</div>
+              <div className="text-xs text-white/65">Desenvolvimento de Sistemas</div>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-2 py-2 md:flex">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                className="rounded-full px-4 py-2 text-sm font-semibold text-white/75 transition-all duration-300 hover:bg-white/10 hover:text-cyan-300"
               >
                 {item.label}
               </a>
@@ -53,38 +58,42 @@ export function Header() {
           </nav>
 
           <div className="hidden md:block">
-            <Button asChild>
-              <a href="#contato">Fale Conosco</a>
+            <Button
+              asChild
+              className="rounded-full bg-primary px-6 text-white shadow-[0_0_30px_rgba(46,123,255,0.35)] hover:scale-[1.02] hover:bg-primary/90"
+            >
+              <a href="#contato">
+                <Sparkles className="mr-2" size={18} />
+                Solicitar proposta
+              </a>
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="rounded-full border border-white/10 bg-white/5 p-2 text-white md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label="Alternar menu"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border">
-            <div className="flex flex-col gap-4">
+          <nav className="panel-futuristic mt-3 rounded-3xl px-4 py-4 md:hidden">
+            <div className="flex flex-col gap-2">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors py-2"
+                  className="rounded-2xl px-4 py-3 text-sm font-semibold text-white/80 transition-all hover:bg-white/8 hover:text-cyan-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <Button asChild className="w-full">
+              <Button asChild className="mt-2 rounded-2xl bg-primary text-white">
                 <a href="#contato" onClick={() => setIsMobileMenuOpen(false)}>
-                  Fale Conosco
+                  Solicitar proposta
                 </a>
               </Button>
             </div>
