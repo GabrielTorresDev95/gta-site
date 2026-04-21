@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button"
 import { Mail, MessageSquare, Send } from "lucide-react"
+import AdBanner from "@/components/AdBanner"
 
 export function CTA() {
   return (
     <section id="contato" className="pb-20 pt-8 lg:pb-32">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="mx-auto max-w-6xl">
+
           <div className="panel-futuristic relative overflow-hidden rounded-[2.4rem] p-8 lg:p-12">
             <div className="absolute -left-10 top-0 h-48 w-48 rounded-full bg-blue-500/20 blur-3xl" />
             <div className="absolute -right-10 bottom-0 h-56 w-56 rounded-full bg-cyan-400/20 blur-3xl" />
@@ -16,9 +18,11 @@ export function CTA() {
                   <Send size={16} />
                   Vamos criar algo forte para sua marca
                 </div>
+
                 <h2 className="mt-5 max-w-3xl text-3xl font-black leading-tight text-white md:text-5xl">
                   Seu projeto pode ter uma presença digital mais premium, moderna e memorável.
                 </h2>
+
                 <p className="mt-5 max-w-2xl text-lg leading-8 text-white/70">
                   Entre em contato para estruturar uma landing page, site, sistema ou painel com aparência mais
                   futurista, limpa e profissional.
@@ -36,6 +40,7 @@ export function CTA() {
                     Enviar e-mail
                   </a>
                 </Button>
+
                 <Button
                   asChild
                   size="lg"
@@ -50,6 +55,10 @@ export function CTA() {
               </div>
             </div>
           </div>
+
+          {/* 🔥 ANÚNCIO AQUI */}
+          <AdBanner />
+
         </div>
       </div>
     </section>
