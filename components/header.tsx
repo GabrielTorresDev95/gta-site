@@ -60,7 +60,7 @@ export function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="rounded-full px-4 py-2 text-sm font-semibold text-white/80 transition-all duration-300 hover:bg-white/10 hover:text-cyan-300"
+                className="rounded-full px-4 py-2 text-sm font-semibold text-white/80 transition-all duration-300 hover:bg-white/10 hover:text-cyan-300 active:bg-cyan-400/15 active:text-cyan-200"
               >
                 {item.label}
               </a>
@@ -70,7 +70,7 @@ export function Header() {
           <div className="hidden md:block">
             <Button
               asChild
-              className="rounded-full bg-primary px-6 text-white shadow-[0_0_30px_rgba(46,123,255,0.35)] hover:scale-[1.02] hover:bg-primary/90"
+              className="rounded-full bg-primary px-6 text-white shadow-[0_0_30px_rgba(46,123,255,0.35)] transition-all duration-200 hover:scale-[1.02] hover:bg-primary/90 active:scale-[0.98] active:bg-blue-700"
             >
               <a href="#contato">
                 <Sparkles className="mr-2" size={18} />
@@ -80,7 +80,7 @@ export function Header() {
           </div>
 
           <button
-            className="md:hidden flex h-11 w-11 items-center justify-center rounded-xl border border-cyan-400/20 bg-slate-900 text-white shadow-[0_0_20px_rgba(34,211,238,0.08)] transition-all hover:bg-slate-800"
+            className="md:hidden flex h-11 w-11 items-center justify-center rounded-xl border border-cyan-400/20 bg-slate-900 text-white shadow-[0_0_20px_rgba(34,211,238,0.08)] transition-all duration-200 hover:bg-slate-800 active:scale-95 active:bg-cyan-400/15 active:text-cyan-200"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Alternar menu"
           >
@@ -95,14 +95,17 @@ export function Header() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="rounded-xl px-4 py-3 text-sm font-semibold text-white/90 transition-all hover:bg-slate-800 hover:text-cyan-300"
+                  className="rounded-xl px-4 py-3 text-sm font-semibold text-white/90 transition-all duration-200 hover:bg-slate-800 hover:text-cyan-300 active:scale-[0.98] active:bg-cyan-400/15 active:text-cyan-200"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
 
-              <Button asChild className="mt-3 h-12 rounded-xl bg-primary text-white hover:bg-primary/90">
+              <Button
+                asChild
+                className="mt-3 h-12 rounded-xl bg-primary text-white transition-all duration-200 hover:bg-primary/90 active:scale-[0.98] active:bg-blue-700"
+              >
                 <a href="#contato" onClick={() => setIsMobileMenuOpen(false)}>
                   <Sparkles className="mr-2" size={18} />
                   Solicitar proposta
