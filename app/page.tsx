@@ -7,6 +7,7 @@ import { CTA } from "@/components/cta"
 import { Footer } from "@/components/footer"
 import AdBanner from "@/components/AdBanner"
 
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -17,7 +18,7 @@ export default function Home() {
       <Differentials />
       <CTA />
       <Footer />
-      <AdBanner />
+      
   
     </main>
   )
