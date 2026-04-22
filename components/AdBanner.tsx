@@ -18,12 +18,12 @@ export default function AdBanner() {
   }, [])
 
   return (
-    <div className="mt-10 bg-red-200 flex justify-center px-4">
+    <div className="mt-10 flex justify-center px-4">
       <ins
         className="adsbygoogle"
         style={{
           display: 'block',
-          minHeight: '120px',
+          minHeight: '120px', // 👈 ESSENCIAL
           width: '100%',
         }}
         data-ad-client="ca-pub-9143074734471145"
