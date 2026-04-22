@@ -17,8 +17,8 @@ export default function Home() {
       <Services />
       <Differentials />
       <CTA />
-      <Footer />
       <AdBanner/>
+      <Footer />
       
   
     </main>
