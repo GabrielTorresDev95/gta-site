@@ -18,10 +18,14 @@ export default function AdBanner() {
   }, [])
 
   return (
-    <div className="mt-10">
+    <div className="mt-10 flex justify-center px-4">
       <ins
         className="adsbygoogle"
-        style={{ display: 'block' }}
+        style={{
+          display: 'block',
+          minHeight: '120px', // 👈 ESSENCIAL
+          width: '100%',
+        }}
         data-ad-client="ca-pub-9143074734471145"
         data-ad-slot="3478915894"
         data-ad-format="auto"
