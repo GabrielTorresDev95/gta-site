@@ -61,7 +61,7 @@ export function Footer() {
 
         <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-white/10 pt-8 text-sm text-white/42 md:flex-row md:items-center md:justify-between">
           <p>© {currentYear} GTA Desenvolvimento de Sistemas. Todos os direitos reservados.</p>
-          <p>CNPJ: 00.000.000/0001-00</p>
+          <p>CNPJ: 62.859.623/0001-71</p>
         </div>
       </div>
     </footer>
